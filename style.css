@@ -1,0 +1,250 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    margin-left: 220px; 
+}
+
+.nav {
+    display: flex;
+    flex-direction: column; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 200px; 
+    height: 100%; 
+    background-color: #333;
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); 
+    z-index: 1000;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav ul li {
+    padding: 10px 0;
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    transition: background 0.3s;
+}
+
+.nav ul li a:hover {
+    background-color: #4CAF50;
+}
+
+.menu-btn {
+    display: none; 
+}
+
+
+.main-content {
+    margin-left: 220px; 
+    padding: 20px;
+}
+
+.intro {
+    padding: 20px;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+    margin: 10px 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+#alimentacao {
+    position: relative; 
+    background-image: url('images/alimentacao-fundo.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 20px;
+}
+
+#alimentacao::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1; 
+}
+
+#alimentacao h2, #alimentacao p, #alimentacao ul {
+    color: aliceblue;
+    position: relative; 
+    z-index: 2; 
+}
+
+#exercicios {
+    position: relative; 
+    background-image: url('images/exercicios-fisicos.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: white; 
+    padding: 20px;
+}
+
+#exercicios::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+}
+
+#exercicios h2, #exercicios p, #exercicios ul {
+    position: relative; 
+    z-index: 2; 
+}
+
+#saude-mental {
+    position: relative; 
+    background-image: url('images/saude-mental-fundo.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: white; 
+    padding: 20px;
+}
+
+#saude-mental::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+}
+
+#saude-mental h2, #saude-mental h3, #saude-mental p, #saude-mental ul, #saude-mental li {
+    position: relative; 
+    z-index: 2; 
+    color: white; 
+}
+
+
+
+#calculadora-imc {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 8px; 
+}
+
+#calculadora-imc label {
+    display: block; 
+    margin: 10px 0 5px; 
+}
+
+#calculadora-imc input {
+    width: 100%; 
+    padding: 10px;
+    margin-bottom: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+}
+
+#calculadora-imc button {
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 10px 15px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+}
+
+#calculadora-imc button:hover {
+    background-color: #45a049;
+}
+
+#resultado-imc {
+    margin-top: 20px; 
+    font-weight: bold; 
+}
+
+#saiba-mais-imc {
+    padding: 20px;
+    background-color: rgba(240, 240, 240, 0.8); /* Fundo claro com leve transparência */
+    border-radius: 8px; /* Bordas arredondadas */
+    margin-top: 20px; /* Espaçamento acima da seção */
+}
+
+#saiba-mais-imc h2 {
+    color: #333; /* Cor do título */
+}
+
+#saiba-mais-imc p {
+    color: #555; /* Cor do texto */
+}
+
+#saiba-mais-imc ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o preenchimento padrão */
+}
+
+#saiba-mais-imc li {
+    margin: 10px 0; /* Espaçamento entre os itens da lista */
+}
+
+#saiba-mais-imc a {
+    color: #4CAF50; /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+#saiba-mais-imc a:hover {
+    text-decoration: underline; /* Sublinha ao passar o mouse */
+}
+
+
+
+@media (max-width: 767px) {
+    .nav {
+        width: 100%;
+        height: auto;
+        flex-direction: row; 
+    }
+
+    .nav ul {
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-around; /
+    }
+
+    header, .main-content {
+        margin-left: 0; 
+    }
+}
